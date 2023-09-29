@@ -1,12 +1,12 @@
-var express = require("express");
-var router = express.Router();
+let express = require("express");
+let router = express.Router();
+
+let portfolioController = require("../controllers/portfolio");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
-router.get("/index1", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
+router.get("/", portfolioController.home);
+router.get("/about", portfolioController.about);
+router.get("/services", portfolioController.services);
+router.get("/projects", portfolioController.projects);
 
 module.exports = router;

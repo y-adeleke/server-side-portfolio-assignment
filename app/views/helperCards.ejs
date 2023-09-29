@@ -1,0 +1,21 @@
+<% include partials/header.ejs %>
+
+<section id="services">
+  <h1><%= title_desc %></h1>
+  <div class="services-con">
+    <% content.forEach(function(element) { %>
+    <div class="my-card" style="width: 18rem">
+      <img src="<%= element.img %>" class="card-img-top card-image" alt="image" />
+      <div class="card-body">
+        <h5 class="card-title"><%= element.title %></h5>
+        <p class="card-text"><%= element.desc %></p>
+        <% if (element.link) { %>
+        <a href="<%= element.link %>" class="btn btn-primary">Explore</a>
+        <% } %>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</section>
+
+<% include partials/footer.ejs %>
