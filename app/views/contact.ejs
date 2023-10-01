@@ -1,0 +1,43 @@
+<!-- 
+  Student name: Yusuf Adeleke
+  Student id: 301114414
+  Date: Sept 30 2023
+-->
+
+<% include partials/header.ejs %>
+
+<section id="contact">
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p>Yusuf O. Adeleke</p>
+    <p>yadeleke@outlook.com</p>
+  </div>
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="/process-form" method="POST">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">First Name</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Contact Number</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Message:</label>
+        <textarea type="password" class="form-control" placeholder="Message" rows="4">Message here... </textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</section>
+
+<% include partials/footer.ejs %>

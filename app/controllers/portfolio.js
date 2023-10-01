@@ -1,3 +1,9 @@
+/*
+  Student name: Yusuf Adeleke
+  Student id: 301114414
+  Date: Sept 30 2023
+*/
+
 module.exports.home = function (req, res, next) {
   res.render("home", { title: "home" });
 };
@@ -55,4 +61,9 @@ module.exports.projects = function (req, res, next) {
 };
 module.exports.contact = function (req, res, next) {
   res.render("contact", { title: "contact" });
+};
+
+exports.submitAboutForm = (req, res) => {
+  const { name } = req.body; // Access form data
+  res.redirect("/"); // Redirect back to the Home page
 };
